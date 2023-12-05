@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game-container">
+    <h1>Fabio e Niklas Pizzeria</h1>
+    <div id="order-container">
+
+        <p id="order-text">Willkommen! Klicken Sie auf "Los Geht's", um eine Pizza zu erhalten.</p>
+        <button id="start-btn" onclick="showPizzaSelection()">Los Geht's</button>
+
+        <button id="say-bye-btn" onclick="sayBye()" style="display: none;">Raus gehen</button>
+    </div>
+
+    <div id="pizza-selection" style="display: none;">
+        <h2>${receiver}: Wählen Sie Ihre Pizza</h2>
+        <form id="pizza-form">
+            <label>
+                <input type="checkbox" name="pizza" value="Salami"> Salami
+            </label>
+            <label>
+                <input type="checkbox" name="pizza" value="Margherita"> Margherita
+            </label>
+            <label>
+                <input type="checkbox" name="pizza" value="Funghi"> Funghi
+            </label>
+            <label>
+                <input type="checkbox" name="pizza" value="Quattro Formaggi"> Quattro Formaggi
+            </label>
+            <label>
+                <input type="checkbox" name="pizza" value="Hawaii"> Hawaii
+            </label>
+            <br>
+            <button type="button" onclick="orderSelectedPizza()">Bestellen</button>
+        </form>
+    </div>
+
+    <div id="payment-container" style="display: none;">
+        <h2>Bezahlen:</h2>
+        <p>Vielen Dank! Auf Wiedersehen!</p>
+        <button onclick="restartGame()">Erneut</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
