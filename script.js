@@ -5,7 +5,7 @@ let pizzasSelected = false;
 let paymentInProgress = false;
 
 function showPizzaSelection() {
-    receiver = Math.random() < 0.5 ? "Fabio" : "Niklas";
+    receiver = Math.random() < 0.5 ? "Kali" : "Kaito";
 
     document.getElementById("pizza-selection").innerHTML = `
         <h2>${receiver}: Wählen Sie Ihre Pizza</h2>
